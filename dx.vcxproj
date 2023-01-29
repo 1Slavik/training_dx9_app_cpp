@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{6FB67ABF-7082-4D66-AADC-71446456501C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dx</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>M:\Windows Kits\10\Include\10.0.17763.0\ucrt;M:\directXsdk\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>M:\directXsdk\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>M:\Windows Kits\10\Include\10.0.17763.0\ucrt;M:\directXsdk\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>M:\directXsdk\Lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>M:\Windows Kits\10\Include\10.0.17763.0\ucrt;M:\directXsdk\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>M:\directXsdk\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>M:\Windows Kits\10\Include\10.0.17763.0\ucrt;M:\directXsdk\Include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>M:\directXsdk\Lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(NETFXKitsDir)Lib\um\x64</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>D3DX_DEBUG;DX9;WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>D3DX_DEBUG;DX9;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DX9;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DX9;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AssemblerOutput>AssemblyCode</AssemblerOutput>
+      <PrecompiledHeaderFile />
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="CubicBezierCurve.h" />
+    <ClInclude Include="D3dFormat.h" />
+    <ClInclude Include="dx.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="slv\components\Transform.h" />
+    <ClInclude Include="slv\framework\appl\Console.h" />
+    <ClInclude Include="slv\framework\appl\DxApp.h" />
+    <ClInclude Include="slv\framework\appl\Screen.h" />
+    <ClInclude Include="slv\framework\appl\WinWindow.h" />
+    <ClInclude Include="slv\framework\time\Time.h" />
+    <ClInclude Include="slv\modules\input\Input.h" />
+    <ClInclude Include="slv\modules\input\KeyCode.h" />
+    <ClInclude Include="slv\modules\render\Camera.h" />
+    <ClInclude Include="slv\modules\render\DxRawIndexBuffer.h" />
+    <ClInclude Include="slv\modules\render\DxRawVertexBuffer.h" />
+    <ClInclude Include="slv\modules\render\IMesh.h" />
+    <ClInclude Include="slv\modules\render\IndexBuffer.h" />
+    <ClInclude Include="slv\modules\render\IRenderer.h" />
+    <ClInclude Include="slv\modules\render\Mesh.h" />
+    <ClInclude Include="slv\modules\render\MeshGroup.h" />
+    <ClInclude Include="slv\modules\render\MeshMetadata.h" />
+    <ClInclude Include="slv\modules\render\MeshSource.h" />
+    <ClInclude Include="slv\modules\render\primitives\ConeRenderer.h" />
+    <ClInclude Include="slv\modules\render\primitives\CylinderRenderer.h" />
+    <ClInclude Include="slv\modules\render\primitives\mesh_data\ConeMesh.h" />
+    <ClInclude Include="slv\modules\render\primitives\mesh_data\CylinderMesh.h" />
+    <ClInclude Include="slv\modules\render\RendererGroup.h" />
+    <ClInclude Include="slv\modules\render\Texture2d.h" />
+    <ClInclude Include="slv\modules\render\TextureParams.h" />
+    <ClInclude Include="slv\modules\render\VertexBuffer.h" />
+    <ClInclude Include="slv\modules\render\VerticesLocation.h" />
+    <ClInclude Include="slv\utils\ariphmetics\numericalSystems.h" />
+    <ClInclude Include="slv\utils\debug\Debug.h" />
+    <ClInclude Include="slv\utils\debug\Padding.h" />
+    <ClInclude Include="slv\utils\debug\StatusList.h" />
+    <ClInclude Include="slv\utils\DxMathEx.h" />
+    <ClInclude Include="slv\utils\ostream\MathTypes.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="SnakeRenderer.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="CubicBezierCurve.cpp" />
+    <ClCompile Include="D3dFormat.cpp" />
+    <ClCompile Include="dx.cpp" />
+    <ClCompile Include="slv\components\Transform.cpp" />
+    <ClCompile Include="slv\framework\appl\Console.cpp" />
+    <ClCompile Include="slv\framework\appl\DxApp.cpp" />
+    <ClCompile Include="slv\framework\appl\Screen.cpp" />
+    <ClCompile Include="slv\framework\appl\WinWindow.cpp" />
+    <ClCompile Include="slv\framework\time\Time.cpp" />
+    <ClCompile Include="slv\modules\input\Input.cpp" />
+    <ClCompile Include="slv\modules\render\Camera.cpp" />
+    <ClCompile Include="slv\modules\render\DxRawIndexBuffer.cpp" />
+    <ClCompile Include="slv\modules\render\DxRawVertexBuffer.cpp" />
+    <ClCompile Include="slv\modules\render\primitives\ConeRenderer.cpp" />
+    <ClCompile Include="slv\modules\render\primitives\CylinderRenderer.cpp" />
+    <ClCompile Include="slv\modules\render\primitives\mesh_data\ConeMesh.cpp" />
+    <ClCompile Include="slv\modules\render\primitives\mesh_data\CylinderMesh.cpp" />
+    <ClCompile Include="slv\modules\render\Texture2d.cpp" />
+    <ClCompile Include="slv\modules\render\TextureParams.cpp" />
+    <ClCompile Include="slv\utils\debug\StatusList.cpp" />
+    <ClCompile Include="slv\utils\DxMathEx.cpp" />
+    <ClCompile Include="slv\utils\ostream\MathTypes.cpp" />
+    <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="SnakeRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="dx.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="dx.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
